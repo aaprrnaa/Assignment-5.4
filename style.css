@@ -1,0 +1,94 @@
+
+/* Assignment 5.4: CSS Variables & Design Tokens */
+
+:root {
+  /* Color tokens */
+  --color-primary: #2563eb;
+  --color-secondary: #7c3aed;
+  --color-background: #f1f5f9;
+  --color-text: #1e293b;
+  --color-card: #ffffff;
+  --color-border: #e2e8f0;
+
+  /* Spacing tokens */
+  --spacing-small: 8px;
+  --spacing-medium: 16px;
+  --spacing-large: 32px;
+
+  /* Font-size tokens */
+  --font-size-small: 14px;
+  --font-size-medium: 16px;
+  --font-size-large: 24px;
+  --font-size-heading: 36px;
+
+  /* Other reusable tokens */
+  --border-radius: 12px;
+  --shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+/* General styles */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: var(--spacing-large);
+  background-color: var(--color-background);
+  color: var(--color-text);
+  font-family: Arial, sans-serif;
+  font-size: var(--font-size-medium);
+  line-height: 1.6;
+}
+
+/* Headings */
+h1 {
+  color: var(--color-primary);
+  font-size: var(--font-size-heading);
+  margin-bottom: var(--spacing-medium);
+}
+
+h2 {
+  color: var(--color-secondary);
+  font-size: var(--font-size-large);
+}
+
+/* Buttons */
+.btn {
+  background-color: var(--color-primary);
+  color: white;
+  border: none;
+  padding: var(--spacing-small) var(--spacing-medium);
+  border-radius: var(--border-radius);
+  font-size: var(--font-size-medium);
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: var(--color-secondary);
+}
+
+/* Cards */
+.card {
+  background-color: var(--color-card);
+  padding: var(--spacing-large);
+  margin-bottom: var(--spacing-medium);
+  border: 1px solid var(--color-border);
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow);
+}
+
+.card p {
+  font-size: var(--font-size-small);
+}
+
+/* Small screens */
+@media (max-width: 600px) {
+  body {
+    padding: var(--spacing-medium);
+  }
+
+  h1 {
+    font-size: var(--font-size-large);
+  }
+}
